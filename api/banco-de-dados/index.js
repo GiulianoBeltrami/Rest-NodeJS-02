@@ -1,15 +1,15 @@
-const Sequelize = require('sequelize');
-const json = require('../config/default.json');
-const mysql = require('mysql');
+const Sequelize = require('sequelize')
+const config = require('config')
 
-var instancia = new Sequelize(
-    json.mysql.database,
-    json.mysql.usuario,
-    json.mysql.senha,
+const instancia = new Sequelize(
+    "petshop",
+    "root",
+    "admin",
     {
-    host: json.mysql.host,
-    port: json.mysql.port,
-    dialect: 'mysql'
-    });
+        host: '127.0.0.1',
+        port: 3307,
+        dialect: 'mysql'
+    }
+)
 
-module.exports = instancia;
+module.exports = instancia
